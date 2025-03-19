@@ -20,13 +20,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     input.addEventListener("change", () => {
       //  seçili input un id sini al.
       const selected = input.id;
-
+      console.log(selected);
       //  ! eğer seçili kategory all ise tüm üürnleri ama bunun dışında bir kategoy ise e
       // lemenalrı al
       if (selected === "all") {
         renderCard(data);
       } else {
-        const filtred = data.filter((item) => item.category === selected);
+        const filtred = data.filter((item) => item.category == selected);
         renderCard(filtred);
       }
 
